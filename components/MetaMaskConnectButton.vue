@@ -11,7 +11,7 @@ const connect = async () => {
 
     let accounts = await provider.listAccounts();
     if (!accounts.length) {
-      accounts = await provider.send("eth_accountRequest", []);
+      accounts = await provider.send("eth_requestAccounts", []);
     }
 
     if (!accounts.length) return;
