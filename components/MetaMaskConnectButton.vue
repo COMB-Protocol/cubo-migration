@@ -11,9 +11,7 @@ const connect = async () => {
 
     let accounts = await provider.listAccounts();
     if (!accounts.length) {
-      accounts = await (window as any).ethereum.request({
-        method: "eth_accountRequest",
-      });
+      accounts = await provider.send("eth_accountRequest", []);
     }
 
     if (!accounts.length) return;
