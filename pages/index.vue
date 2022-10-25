@@ -24,7 +24,7 @@ const decide = async (decision: number) => {
 
     await tx.wait();
 
-    await   checkDecision();
+    await checkDecision();
   } catch (error) {
     error.value = error.toString();
     console.log(error.value);
@@ -90,7 +90,7 @@ onMounted(() => {
             v-else-if="!hasDecision"
             class="border p-2 w-fit rounded-md bg-green-400/20"
           >
-            You have already made a decision.
+            No decision available. Please wait until you are whitelisted.
           </div>
           <div v-else class="flex space-x-4">
             <button
