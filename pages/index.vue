@@ -3,8 +3,8 @@ import { ethers } from "ethers";
 import intent from "~~/shared/abis/intent";
 
 const isLoading = ref(false);
-const hasDecision = ref(false);
-const error = ref(undefined);
+const hasDecision = useState("decision", () => false);
+const error = useState("error", () => undefined);
 
 const decide = async (decision: number) => {
   try {
@@ -24,10 +24,10 @@ const decide = async (decision: number) => {
 
     await tx.wait();
 
+    hasDecision.value = true;
     await checkDecision();
-  } catch (error) {
-    error.value = error.toString();
-    console.log(error.value);
+  } catch (err) {
+    error.value = err;
   } finally {
     isLoading.value = false;
   }
@@ -105,6 +105,9 @@ onMounted(() => {
             >
               Migrate
             </button>
+          </div>
+          <div v-if="error">
+            <h1>{{ error }}</h1>
           </div>
         </div>
       </div>
