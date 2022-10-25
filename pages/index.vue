@@ -51,6 +51,9 @@ onMounted(() => {
   (window as any).ethereum.on("accountsChanged", () => {
     checkDecision();
   });
+  (window as any).ethereum.on("networkChanged", () => {
+    checkDecision();
+  });
 });
 </script>
 
