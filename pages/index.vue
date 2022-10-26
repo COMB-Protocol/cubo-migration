@@ -93,7 +93,8 @@ onMounted(() => {
             v-else-if="!hasDecision"
             class="border p-2 w-fit rounded-md bg-green-400/20"
           >
-            No decision available. Please wait until you are whitelisted.
+            No decision available. Please check that you are connected to
+            Polygon.
           </div>
           <div v-else class="flex space-x-4">
             <button
