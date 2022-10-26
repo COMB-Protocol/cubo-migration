@@ -81,8 +81,8 @@ onMounted(() => {
                 Discord
               </a>
               and read the announcements. After you have made a decision on this
-              webpage, you will be airdropped tokens at a later date. Migrating
-              with COMB will also send you a capsule with airdropped tokens.
+              webpage, you will be airdropped tokens at a later date. You will
+              also get a capsule when migrating with COMB.
             </span>
             <br />
           </div>
