@@ -81,7 +81,8 @@ onMounted(() => {
                 Discord
               </a>
               and read the announcements. After you have made a decision on this
-              webpage, you will be airdropped tokens at a later date.
+              webpage, you will be airdropped tokens at a later date. Migrating
+              with COMB will also send you a capsule with airdropped tokens.
             </span>
             <br />
           </div>
@@ -93,21 +94,21 @@ onMounted(() => {
             v-else-if="!hasDecision"
             class="border p-2 w-fit rounded-md bg-green-400/20"
           >
-            No decision available. Please check that you are connected to
-            Polygon.
+            Your decision has already went through. Please check that you are
+            connected to Polygon.
           </div>
           <div v-else class="flex space-x-4">
             <button
               @click="decide(2)"
               class="p-2 border text-black rounded-md px-8 py-2 hover:opacity-90 active:scale-95 transition-all"
             >
-              Exit
+              Leave
             </button>
             <button
               @click="decide(1)"
               class="p-2 border bg-green-700 text-white rounded-md px-12 py-2 hover:opacity-90 active:scale-95 transition-all"
             >
-              Migrate
+              Migrate with COMB
             </button>
           </div>
           <div v-if="error">
